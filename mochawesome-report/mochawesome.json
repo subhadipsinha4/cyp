@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T15:16:01.761Z",
+    "end": "2021-08-03T15:16:18.462Z",
+    "duration": 16701,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f08b5c54-6ed1-4dcc-855f-1397080f054f",
+      "title": "",
+      "fullFile": "cypress/integration/Opps/HomePage.js",
+      "file": "cypress/integration/Opps/HomePage.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a0c6723-29d8-4937-b0fa-cf04b6ca59d3",
+          "title": "Test Call methord from other file and data perametetarize",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "data parameterize test",
+              "fullTitle": "Test Call methord from other file and data perametetarize data parameterize test",
+              "timedOut": null,
+              "duration": 3191,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.setName().type(self.data.name);\ncy.getCheckBoxClick().check();\ncy.setGender().select(self.data.gender);\ncy.clickOnSubmit().click();",
+              "err": {},
+              "uuid": "af8c36ef-8795-43d2-8a43-8a0f47edbab4",
+              "parentUUID": "5a0c6723-29d8-4937-b0fa-cf04b6ca59d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test Shop page",
+              "fullTitle": "Test Call methord from other file and data perametetarize test Shop page",
+              "timedOut": null,
+              "duration": 3078,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homeObj.getShopLink().click();\nself.data.products.forEach(element => {\n  //cy.getProductToCart(element)\n  homeObj.clickProduct(element);\n});\nhomeObj.clickCheckOutButton().click();",
+              "err": {},
+              "uuid": "46e2a769-0dbe-440a-bcea-c32d3da0eb5a",
+              "parentUUID": "5a0c6723-29d8-4937-b0fa-cf04b6ca59d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "increse the items in cart and validate the product price",
+              "fullTitle": "Test Call methord from other file and data perametetarize increse the items in cart and validate the product price",
+              "timedOut": null,
+              "duration": 308,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#exampleInputEmail1').clear();\ncy.get('#exampleInputEmail1').type('4');\ncy.get('tr td:nth-child(3) strong').each(($ele, index, $list) => {\n  if (index == 0) {\n    let unitPrice = $ele.eq(index).text();\n    cy.log(unitPrice);\n    const arr = unitPrice.split(' ');\n    cy.log(arr[1]);\n    cy.log(arr[1] * 4);\n  }\n});",
+              "err": {},
+              "uuid": "48497591-7f79-4e4b-92a9-f92576033f09",
+              "parentUUID": "5a0c6723-29d8-4937-b0fa-cf04b6ca59d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test order place",
+              "fullTitle": "Test Call methord from other file and data perametetarize test order place",
+              "timedOut": null,
+              "duration": 5556,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cartObj.clickOnCheckout();\ncartObj.setCountry();\ncartObj.clickTearmsCondition();\ncartObj.clickOnSubmit();",
+              "err": {},
+              "uuid": "657df799-66e0-40fd-ae80-9e29a5f4ae60",
+              "parentUUID": "5a0c6723-29d8-4937-b0fa-cf04b6ca59d3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "af8c36ef-8795-43d2-8a43-8a0f47edbab4",
+            "46e2a769-0dbe-440a-bcea-c32d3da0eb5a",
+            "48497591-7f79-4e4b-92a9-f92576033f09",
+            "657df799-66e0-40fd-ae80-9e29a5f4ae60"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12133,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

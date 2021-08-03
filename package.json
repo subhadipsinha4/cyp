@@ -1,0 +1,18 @@
+{
+  "name": "cyp",
+  "version": "1.0.0",
+  "description": "test cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/cypress run",
+    "headTest":"npm run test -- --headed --spec \"cypress/integration/Opps/HomePage.js\" --reporter mochawesome",
+    "firefoxTest":"npm run test -- --browser firefox"
+  },
+  "author": "Subhadip",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.7.0",
+    "mocha": "^9.0.3",
+    "mochawesome": "^6.2.2"
+  }
+}
